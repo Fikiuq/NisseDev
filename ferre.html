@@ -13,23 +13,24 @@
     }
     body {
       font-family: 'Montserrat', sans-serif;
-      background-color: #000;
+      background-color: #111;
       color: #fff;
       overflow-x: hidden;
     }
     header {
       position: relative;
       height: 100vh;
-      background: url('https://source.unsplash.com/1600x900/?stars,universe') center/cover no-repeat;
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://source.unsplash.com/1600x900/?stars,universe') center/cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
     }
     header h1 {
-      font-size: 5rem;
+      font-size: 4rem;
       text-transform: uppercase;
       letter-spacing: 4px;
+      font-weight: bold;
       animation: fadeIn 2s ease-in-out;
     }
     @keyframes fadeIn {
@@ -37,7 +38,7 @@
       to { opacity: 1; transform: translateY(0); }
     }
     .section {
-      padding: 100px 20px;
+      padding: 80px 10%;
       text-align: center;
       opacity: 0;
       transform: translateY(50px);
@@ -51,14 +52,15 @@
       background-attachment: fixed;
       background-size: cover;
       background-position: center;
-      height: 70vh;
+      height: 60vh;
     }
     .parallax.one { background-image: url('https://source.unsplash.com/1600x900/?hospital'); }
     .parallax.two { background-image: url('https://source.unsplash.com/1600x900/?computer,gaming'); }
     footer {
-      background: #111;
-      padding: 50px 20px;
+      background: #222;
+      padding: 40px;
       text-align: center;
+      font-size: 0.9rem;
     }
     .donate-btn {
       display: inline-block;
@@ -69,10 +71,11 @@
       font-size: 1.2rem;
       font-weight: bold;
       text-decoration: none;
-      border-radius: 5px;
-      transition: transform 0.3s ease-in-out;
+      border-radius: 30px;
+      transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
     }
     .donate-btn:hover {
+      background: #ffaa00;
       transform: scale(1.1);
     }
   </style>
@@ -84,27 +87,27 @@
 
   <section class="section" id="intro">
     <h2>Een Onverwachte Strijd</h2>
-    <p>Toen Ferre 13 jaar oud was, veranderde zijn leven drastisch. Hij werd gediagnosticeerd met een zeldzame nierziekte, iets wat hij nooit had zien aankomen. Vanaf dat moment moest hij leren omgaan met talloze ziekenhuisbezoeken en behandelingen.</p>
+    <p>Op zijn 13de ontdekte Ferre dat hij een zeldzame nierziekte had. Zijn leven veranderde van de ene op de andere dag. Ziekenhuisbezoeken, behandelingen en onzekerheid werden een deel van zijn dagelijkse realiteit.</p>
   </section>
 
   <div class="parallax one"></div>
 
   <section class="section" id="dream">
     <h2>Een Gamer met een Droom</h2>
-    <p>Ondanks alle uitdagingen bleef Ferre vasthouden aan zijn passie: gamen. Hij wilde niet herinnerd worden als "die zieke jongen", maar als een strijder die zijn droom achterna ging. Zijn wens? Een krachtige gaming PC om zich even in een andere wereld te verliezen.</p>
+    <p>Ondanks zijn ziekte bleef Ferre vastberaden zijn passie voor gamen volgen. Zijn droom? Een krachtige gaming PC waarmee hij even kan ontsnappen aan de realiteit.</p>
   </section>
 
   <div class="parallax two"></div>
 
   <section class="section" id="steun">
     <h2>Het Belang van Orgaandonatie</h2>
-    <p>Ferre’s toekomst hangt af van de mogelijkheid om een geschikte nierdonor te vinden. Orgaandonatie kan levens redden. Wil je meer weten over hoe donatie levens kan veranderen? Lees hier een artikel over andere Vlamingen die dankzij een donor een tweede kans kregen:</p>
+    <p>Ferre’s toekomst hangt af van een niertransplantatie. Orgaandonatie kan levens redden. Lees hier meer over andere Vlamingen die dankzij een donor een tweede kans kregen:</p>
     <a href="https://www.hln.be/nieuws/na-hartverscheurende-dood-van-nox-5-ook-deze-drie-vlamingen-danken-hun-leven-aan-een-donor~a6768904/" class="donate-btn" target="_blank">Lees het artikel</a>
   </section>
 
   <section class="section" id="support">
     <h2>Steun Ferre</h2>
-    <p>Help Ferre om zijn droom waar te maken en draag bij aan zijn gaming setup. Alle donaties gaan rechtstreeks naar de bouw van zijn ultieme gaming PC.</p>
+    <p>Help Ferre zijn droom te realiseren! Draag bij aan zijn gaming setup en maak een verschil.</p>
     <a href="#" class="donate-btn">Doneer Nu</a>
   </section>
 
