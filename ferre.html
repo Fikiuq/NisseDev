@@ -13,28 +13,25 @@
     }
     body {
       font-family: 'Montserrat', sans-serif;
-      background-color: #000;
+      background-color: #111;
       color: #fff;
       overflow-x: hidden;
     }
     header {
       position: relative;
       height: 100vh;
-      background: url('header-image.jpg') center/cover no-repeat;
+      background: url('images/header.jpg') center/cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
+      color: #ffcc00;
     }
     header h1 {
-      font-size: 5rem;
+      font-size: 4rem;
       text-transform: uppercase;
       letter-spacing: 4px;
-      animation: fadeIn 2s ease-in-out;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
     }
     .section {
       padding: 100px 20px;
@@ -55,11 +52,13 @@
     .image-container img {
       width: 100%;
       border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(255, 204, 0, 0.5);
     }
     footer {
-      background: #111;
+      background: #222;
       padding: 50px 20px;
       text-align: center;
+      color: #ffcc00;
     }
     .donate-btn {
       display: inline-block;
@@ -71,10 +70,11 @@
       font-weight: bold;
       text-decoration: none;
       border-radius: 5px;
-      transition: transform 0.3s ease-in-out;
+      transition: transform 0.3s ease-in-out, background 0.3s;
     }
     .donate-btn:hover {
       transform: scale(1.1);
+      background: #ffd633;
     }
   </style>
 </head>
@@ -85,26 +85,26 @@
 
   <section class="section" id="intro">
     <h2>Een Onverwachte Strijd</h2>
-    <div class="image-container"><img src="hospital-image.jpg" alt="Ziekenhuis"></div>
-    <p>Toen Ferre 13 jaar oud was, veranderde zijn leven drastisch. Hij werd gediagnosticeerd met een zeldzame nierziekte, iets wat hij nooit had zien aankomen. Vanaf dat moment moest hij leren omgaan met talloze ziekenhuisbezoeken en behandelingen.</p>
+    <div class="image-container"><img src="images/hospital.jpg" alt="Ziekenhuis"></div>
+    <p>Toen Ferre 13 jaar oud was, veranderde zijn leven drastisch. Hij werd gediagnosticeerd met een zeldzame nierziekte en moest leren omgaan met talloze ziekenhuisbezoeken en behandelingen.</p>
   </section>
 
   <section class="section" id="dream">
     <h2>Een Gamer met een Droom</h2>
-    <div class="image-container"><img src="gaming-setup.jpg" alt="Gaming setup"></div>
-    <p>Ondanks alle uitdagingen bleef Ferre vasthouden aan zijn passie: gamen. Hij wilde niet herinnerd worden als "die zieke jongen", maar als een strijder die zijn droom achterna ging. Zijn wens? Een krachtige gaming PC om zich even in een andere wereld te verliezen.</p>
+    <div class="image-container"><img src="images/gaming.jpg" alt="Gaming setup"></div>
+    <p>Ondanks alle uitdagingen bleef Ferre vasthouden aan zijn passie: gamen. Hij wilde niet herinnerd worden als "die zieke jongen", maar als een strijder die zijn droom achterna ging.</p>
   </section>
 
   <section class="section" id="steun">
     <h2>Het Belang van Orgaandonatie</h2>
-    <div class="image-container"><img src="donation-awareness.jpg" alt="Orgaandonatie"></div>
-    <p>Ferre’s toekomst hangt af van de mogelijkheid om een geschikte nierdonor te vinden. Orgaandonatie kan levens redden. Wil je meer weten over hoe donatie levens kan veranderen? Lees hier een artikel over andere Vlamingen die dankzij een donor een tweede kans kregen:</p>
+    <div class="image-container"><img src="images/donation.jpg" alt="Orgaandonatie bewustwording"></div>
+    <p>Ferre’s toekomst hangt af van een geschikte nierdonor. Orgaandonatie kan levens redden. Lees hier een artikel over andere Vlamingen die dankzij een donor een tweede kans kregen:</p>
     <a href="https://www.hln.be/nieuws/na-hartverscheurende-dood-van-nox-5-ook-deze-drie-vlamingen-danken-hun-leven-aan-een-donor~a6768904/" class="donate-btn" target="_blank">Lees het artikel</a>
   </section>
 
   <section class="section" id="support">
     <h2>Steun Ferre</h2>
-    <div class="image-container"><img src="support-ferre.jpg" alt="Steun Ferre"></div>
+    <div class="image-container"><img src="images/support.jpg" alt="Steun Ferre"></div>
     <p>Help Ferre om zijn droom waar te maken en draag bij aan zijn gaming setup. Alle donaties gaan rechtstreeks naar de bouw van zijn ultieme gaming PC.</p>
     <a href="#" class="donate-btn">Doneer Nu</a>
   </section>
