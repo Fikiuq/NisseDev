@@ -6,7 +6,6 @@
   <title>Het Leven van Ferre</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
   <style>
-    /* Reset en basisstijlen */
     * {
       margin: 0;
       padding: 0;
@@ -14,151 +13,109 @@
     }
     body {
       font-family: 'Montserrat', sans-serif;
-      line-height: 1.6;
-      background-color: #f4f4f4;
-      color: #333;
+      background-color: #000;
+      color: #fff;
       overflow-x: hidden;
     }
-    /* Header (hero sectie) */
     header {
       position: relative;
       height: 100vh;
-      background: url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+      background: url('https://source.unsplash.com/1600x900/?stars,universe') center/cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
-    }
-    header::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.5);
+      text-align: center;
     }
     header h1 {
-      position: relative;
-      color: #fff;
-      font-size: 4rem;
-      text-align: center;
-      z-index: 1;
+      font-size: 5rem;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      animation: fadeIn 2s ease-in-out;
     }
-    /* Main content */
-    main {
-      padding: 60px 20px;
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
-    section {
-      max-width: 800px;
-      margin: 0 auto 100px;
+    .section {
+      padding: 100px 20px;
       text-align: center;
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(50px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
     }
-    section.visible {
+    .section.visible {
       opacity: 1;
       transform: translateY(0);
-      transition: all 1s ease-out;
     }
-    section h2 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
+    .parallax {
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      height: 70vh;
     }
-    section p {
-      font-size: 1.2rem;
-      margin-bottom: 20px;
-      line-height: 1.5;
-    }
-    /* Footer (advertentie Steun Ferre) */
+    .parallax.one { background-image: url('https://source.unsplash.com/1600x900/?hospital'); }
+    .parallax.two { background-image: url('https://source.unsplash.com/1600x900/?computer,gaming'); }
     footer {
-      background: #222;
-      color: #fff;
+      background: #111;
+      padding: 50px 20px;
       text-align: center;
-      padding: 40px 20px;
     }
-    footer a {
-      color: #ffcc00;
-      text-decoration: none;
+    .donate-btn {
+      display: inline-block;
+      padding: 15px 30px;
+      margin-top: 20px;
+      background: #ffcc00;
+      color: #000;
+      font-size: 1.2rem;
       font-weight: bold;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: transform 0.3s ease-in-out;
     }
-    footer a:hover {
-      text-decoration: underline;
+    .donate-btn:hover {
+      transform: scale(1.1);
     }
   </style>
 </head>
 <body>
-  <!-- Hero sectie -->
   <header>
     <h1>Het Leven van Ferre</h1>
   </header>
 
-  <!-- Content -->
-  <main>
-    <!-- Introductie -->
-    <section id="intro">
-      <h2>Een Jong Leven vol Passie</h2>
-      <p>
-        Ferre werd geboren met een ontembare geest en een hart vol dromen. Al van jongs af aan straalde hij een kracht uit die anderen inspireerde – een kracht die hem door de zwaarste tijden zou loodsen.
-      </p>
-    </section>
+  <section class="section" id="intro">
+    <h2>De Oneerlijke Strijd</h2>
+    <p>Op 15-jarige leeftijd werd Ferre geconfronteerd met een strijd die niemand zou moeten voeren: nierfalen. Terwijl zijn leeftijdsgenoten zich bezighielden met sporten en gamen, bracht hij zijn dagen door in ziekenhuizen, vechtend tegen een onzichtbare vijand.</p>
+  </section>
 
-    <!-- Strijd en tegenslag -->
-    <section id="strijd">
-      <h2>De Strijd Tegen de Storm</h2>
-      <p>
-        Op jonge leeftijd kreeg Ferre de diagnose nierfalen. Terwijl de wereld om hem heen in duisternis leek te vervallen, vocht hij elke dag met moed en doorzettingsvermogen. Zijn leven werd een epische strijd waarin elk moment telde.
-      </p>
-    </section>
+  <div class="parallax one"></div>
 
-    <!-- Hoop en droom -->
-    <section id="hoop">
-      <h2>Een Droom die Brandt als Vuur</h2>
-      <p>
-        Ondanks alle tegenslagen was Ferre vastbesloten zijn passie voor gaming en technologie te volgen. Hij koesterde één droom: het bouwen van de ultieme gaming PC, een symbool van hoop en verzet. Een droom die niet alleen hem, maar iedereen inspireert die in moeilijke tijden kracht zoekt.
-      </p>
-    </section>
+  <section class="section" id="dream">
+    <h2>De Droom van een Gamer</h2>
+    <p>Ondanks de pijn en vermoeidheid bleef Ferre dromen. Hij wilde niet herinnerd worden als "die zieke jongen" maar als een gamer, een vechter, een inspiratie. Zijn ultieme wens? Een eigen krachtige gaming PC waarmee hij zich even kon verliezen in een andere wereld.</p>
+  </section>
 
-    <!-- Steun Ferre -->
-    <section id="steun">
-      <h2>Steun Ferre</h2>
-      <p>
-        Alle opbrengsten gaan naar het realiseren van Ferre's ultieme gaming PC – een lichtpunt in de duisternis en een herinnering dat zelfs in de zwaarste strijd, hoop overwint.
-      </p>
-      <p>
-        <a href="https://ferre-webshop.example.com" target="_blank">Bezoek Ferre's Webshop</a>
-      </p>
-    </section>
-  </main>
+  <div class="parallax two"></div>
 
-  <!-- Footer -->
+  <section class="section" id="steun">
+    <h2>Steun Ferre</h2>
+    <p>Help Ferre om zijn droom waar te maken. Alle donaties gaan rechtstreeks naar het bouwen van zijn ultieme gaming PC.</p>
+    <a href="#" class="donate-btn">Doneer Nu</a>
+  </section>
+
   <footer>
     <p>&copy; 2025 Het Leven van Ferre. Alle rechten voorbehouden.</p>
   </footer>
 
-  <!-- GSAP voor geavanceerde animaties (optioneel) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
   <script>
-    // Eenvoudige fade-in op scroll met IntersectionObserver
-    const sections = document.querySelectorAll("section");
-    const observerOptions = {
-      threshold: 0.2
-    };
-
-    const sectionObserver = new IntersectionObserver((entries, observer) => {
+    const sections = document.querySelectorAll(".section");
+    const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
         }
       });
-    }, observerOptions);
-
-    sections.forEach(section => {
-      sectionObserver.observe(section);
-    });
-
-    // Extra GSAP-animatie voor de headertekst (optioneel)
-    gsap.from("header h1", { duration: 1.5, opacity: 0, y: -50, ease: "power3.out", delay: 0.5 });
+    }, { threshold: 0.2 });
+    sections.forEach(section => observer.observe(section));
   </script>
 </body>
 </html>
