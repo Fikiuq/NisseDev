@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DVD Bounce Effect</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: black;
+        }
+        img {
+            position: absolute;
+            width: 150px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <img src="valkenborgs.png" id="dvdLogo">
+    <script>
+        const dvd = document.getElementById("dvdLogo");
+        let x = 100, y = 100;
+        let dx = 2, dy = 2;
+        let speed = 3;
+        
+        function moveLogo() {
+            let screenWidth = window.innerWidth - dvd.clientWidth;
+            let screenHeight = window.innerHeight - dvd.clientHeight;
+            
+            x += dx * speed;
+            y += dy * speed;
+            
+            if (x <= 0 || x >= screenWidth) {
+                dx *= -1;
+            }
+            if (y <= 0 || y >= screenHeight) {
+                dy *= -1;
+            }
+            
+            dvd.style.left = x + "px";
+            dvd.style.top = y + "px";
+            
+            requestAnimationFrame(moveLogo);
+        }
+        moveLogo();
+    </script>
+</body>
+</html>
