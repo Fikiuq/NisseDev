@@ -25,16 +25,22 @@
       align-items: center;
       justify-content: center;
       text-align: center;
+      animation: fadeIn 2s ease-in-out;
     }
     header h1 {
       font-size: 5rem;
       text-transform: uppercase;
       letter-spacing: 4px;
-      animation: fadeIn 2s ease-in-out;
+      opacity: 0;
+      animation: fadeInText 2s ease-in-out forwards 1s;
     }
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(-20px); }
       to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInText {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
     }
     .section {
       padding: 100px 20px;
@@ -84,17 +90,23 @@
 
   <section class="section" id="intro">
     <h2>De Oneerlijke Strijd</h2>
-    <p>Op 15-jarige leeftijd werd Ferre geconfronteerd met een strijd die niemand zou moeten voeren: nierfalen. Terwijl zijn leeftijdsgenoten zich bezighielden met sporten en gamen, bracht hij zijn dagen door in ziekenhuizen, vechtend tegen een onzichtbare vijand.</p>
+    <p>Ferre is een 15-jarige jongen die op 13-jarige leeftijd de diagnose nefronoftise kreeg, een zeldzame nierziekte. Deze ziekte tast de nierhaartjes aan en leidt uiteindelijk tot nierfalen. Sinds die dag veranderde zijn leven drastisch: ziekenhuisbezoeken, medicijnen en vermoeidheid namen de plaats in van een onbezorgde jeugd.</p>
   </section>
 
   <div class="parallax one"></div>
 
   <section class="section" id="dream">
     <h2>De Droom van een Gamer</h2>
-    <p>Ondanks de pijn en vermoeidheid bleef Ferre dromen. Hij wilde niet herinnerd worden als "die zieke jongen" maar als een gamer, een vechter, een inspiratie. Zijn ultieme wens? Een eigen krachtige gaming PC waarmee hij zich even kon verliezen in een andere wereld.</p>
+    <p>Ondanks zijn ziekte bleef Ferre dromen. Hij wilde niet herinnerd worden als "die zieke jongen" maar als een gamer en een vechter. Zijn ultieme wens? Een krachtige gaming PC waarmee hij zich even kon verliezen in een andere wereld en verbonden kon blijven met zijn vrienden.</p>
   </section>
 
   <div class="parallax two"></div>
+
+  <section class="section" id="orgaandonatie">
+    <h2>Het Belang van Orgaandonatie</h2>
+    <p>Ferre's situatie benadrukt het belang van orgaandonatie. In Vlaanderen wachten veel mensen met nierfalen op een geschikte donor. Het hartverscheurende verhaal van de 5-jarige Nox, wiens organen na zijn overlijden drie levens redden, toont hoe belangrijk orgaandonatie is.</p>
+    <p>Lees meer over Ferre en orgaandonatie in dit artikel: <a href="https://www.hln.be/nieuws/na-hartverscheurende-dood-van-nox-5-ook-deze-drie-vlamingen-danken-hun-leven-aan-een-donor~a6768904/" target="_blank" style="color: #ffcc00; text-decoration: none;">HLN Artikel</a></p>
+  </section>
 
   <section class="section" id="steun">
     <h2>Steun Ferre</h2>
