@@ -3,128 +3,192 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mijn CV - [Jouw Naam]</title>
+  <title>CV - Jouw Naam</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
+    * {
+      box-sizing: border-box;
       margin: 0;
-      background-color: #f4f4f4;
-      color: #333;
+      padding: 0;
     }
 
-    header {
-      background-color: #2c3e50;
+    body {
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      background-color: #f8f9fa;
+      color: #212529;
+    }
+
+    .sidebar {
+      background-color: #1f2937;
       color: white;
-      padding: 2rem;
-      text-align: center;
+      width: 280px;
+      min-height: 100vh;
+      padding: 2rem 1.5rem;
+      position: fixed;
     }
 
-    header img {
-      width: 150px;
-      height: 150px;
+    .sidebar h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .sidebar p {
+      color: #9ca3af;
+      margin-bottom: 1.5rem;
+    }
+
+    .sidebar img {
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
       border: 4px solid white;
-      margin-top: 1rem;
+      margin-bottom: 1.5rem;
     }
 
-    main {
-      max-width: 1000px;
-      margin: 2rem auto;
-      background: white;
-      padding: 2rem;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    .sidebar a {
+      display: block;
+      color: #d1d5db;
+      text-decoration: none;
+      margin: 0.5rem 0;
+    }
+
+    .sidebar a:hover {
+      color: #3b82f6;
+    }
+
+    .content {
+      margin-left: 280px;
+      padding: 3rem 2rem;
+      width: calc(100% - 280px);
+    }
+
+    .section {
+      margin-bottom: 3rem;
     }
 
     h2 {
-      border-bottom: 2px solid #2c3e50;
-      padding-bottom: 0.5rem;
-      margin-top: 2rem;
-    }
-
-    section {
-      margin-bottom: 2rem;
+      font-size: 1.5rem;
+      border-bottom: 2px solid #1f2937;
+      padding-bottom: 0.4rem;
+      margin-bottom: 1rem;
     }
 
     ul {
-      padding-left: 1.2rem;
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      margin-bottom: 0.8rem;
     }
 
     .skills span {
       display: inline-block;
-      background-color: #ecf0f1;
-      padding: 0.3rem 0.7rem;
-      margin: 0.2rem;
-      border-radius: 5px;
+      background-color: #e2e8f0;
+      padding: 0.4rem 0.7rem;
+      margin: 0.3rem;
+      border-radius: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    .contact a {
+      color: #1d4ed8;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
     }
 
     footer {
       text-align: center;
       font-size: 0.9rem;
-      padding: 1rem;
-      background-color: #2c3e50;
-      color: white;
+      padding: 2rem 0;
+      color: #6b7280;
     }
 
-    a {
-      color: #3498db;
+    @media (max-width: 768px) {
+      .sidebar {
+        position: relative;
+        width: 100%;
+        text-align: center;
+      }
+
+      .content {
+        margin-left: 0;
+        width: 100%;
+        padding: 2rem;
+      }
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Jouw Naam</h1>
-  <p>Webontwikkelaar | Creatief Probleemoplosser | Teamspeler</p>
-  <img src="/images/jouwfoto.jpg" alt="Profielfoto">
-</header>
+  <aside class="sidebar">
+    <img src="/images/jouwfoto.jpg" alt="Profielfoto">
+    <h1>Jouw Naam</h1>
+    <p>Fullstack Developer</p>
+    <nav>
+      <a href="#persoonlijk">🧍 Persoonlijk</a>
+      <a href="#ervaring">💼 Ervaring</a>
+      <a href="#opleiding">🎓 Opleiding</a>
+      <a href="#skills">🛠️ Vaardigheden</a>
+      <a href="#contact">📧 Contact</a>
+    </nav>
+  </aside>
 
-<main>
-  <section>
-    <h2>Persoonlijke Gegevens</h2>
-    <p><strong>Naam:</strong> Jouw Naam</p>
-    <p><strong>Geboortedatum:</strong> 01-01-2000</p>
-    <p><strong>Adres:</strong> Straatnaam 1, 1000 Brussel</p>
-    <p><strong>Telefoon:</strong> 012 34 56 78</p>
-    <p><strong>Email:</strong> jouw@email.com</p>
-  </section>
+  <main class="content">
+    <section id="persoonlijk" class="section">
+      <h2>Persoonlijke Gegevens</h2>
+      <ul>
+        <li><strong>Naam:</strong> Jouw Naam</li>
+        <li><strong>Geboortedatum:</strong> 1 januari 2000</li>
+        <li><strong>Adres:</strong> Voorbeeldstraat 1, 1000 Brussel</li>
+        <li><strong>Telefoon:</strong> 012 34 56 78</li>
+        <li><strong>Email:</strong> jouw@email.com</li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>Werkervaring</h2>
-    <ul>
-      <li><strong>Front-end Developer</strong> bij WebSolutions (2023 - heden)</li>
-      <li><strong>Stagiair Webdesign</strong> bij Creatify (2022 - 2023)</li>
-    </ul>
-  </section>
+    <section id="ervaring" class="section">
+      <h2>Werkervaring</h2>
+      <ul>
+        <li><strong>Webdeveloper</strong> – WebSolutions (2023 – heden)</li>
+        <li><strong>Stagiair Frontend</strong> – Creatify (2022 – 2023)</li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>Opleiding</h2>
-    <ul>
-      <li><strong>Bachelor Toegepaste Informatica</strong> - Hogeschool Gent (2020 - 2023)</li>
-      <li><strong>Secundair Onderwijs</strong> - IT & Netwerken (2014 - 2020)</li>
-    </ul>
-  </section>
+    <section id="opleiding" class="section">
+      <h2>Opleiding</h2>
+      <ul>
+        <li><strong>Bachelor Toegepaste Informatica</strong> – Hogeschool Gent (2020 – 2023)</li>
+        <li><strong>Secundair Onderwijs IT & Netwerken</strong> – School X (2014 – 2020)</li>
+      </ul>
+    </section>
 
-  <section class="skills">
-    <h2>Vaardigheden</h2>
-    <span>HTML</span>
-    <span>CSS</span>
-    <span>JavaScript</span>
-    <span>PHP</span>
-    <span>MySQL</span>
-    <span>React</span>
-    <span>Git</span>
-  </section>
+    <section id="skills" class="section skills">
+      <h2>Vaardigheden</h2>
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+      <span>PHP</span>
+      <span>MySQL</span>
+      <span>Laravel</span>
+      <span>React</span>
+      <span>Git</span>
+    </section>
 
-  <section>
-    <h2>Contact</h2>
-    <p>Stuur me een mail: <a href="mailto:jouw@email.com">jouw@email.com</a></p>
-    <p>Of bezoek mijn LinkedIn: <a href="https://linkedin.com/in/jouwnaam" target="_blank">linkedin.com/in/jouwnaam</a></p>
-  </section>
-</main>
+    <section id="contact" class="section contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:jouw@email.com">jouw@email.com</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/jouwnaam" target="_blank">linkedin.com/in/jouwnaam</a></p>
+    </section>
 
-<footer>
-  © 2025 Jouw Naam. Alle rechten voorbehouden.
-</footer>
+    <footer>
+      © 2025 Jouw Naam. Alle rechten voorbehouden.
+    </footer>
+  </main>
 
 </body>
 </html>
